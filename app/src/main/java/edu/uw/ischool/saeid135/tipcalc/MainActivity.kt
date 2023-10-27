@@ -52,7 +52,8 @@ class MainActivity : ComponentActivity() {
             newTxt = newTxt.drop(1)
             var newNum1 = newTxt.toFloat()
             var newNum2 = newNum1 * 0.15
-            var finalText = "$" + newNum2.toString()
+            var roundup = String.format("%.2f", newNum2)
+            var finalText = "$" + roundup
             Toast.makeText(this, finalText, Toast.LENGTH_SHORT).show()
 
         }
